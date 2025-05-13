@@ -375,7 +375,7 @@ button {
 
     .techno .row {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .p1 {
@@ -446,6 +446,7 @@ button {
 
     .navlinks.active {
         display: flex;
+        z-index: 5;
     }
 
     .name{

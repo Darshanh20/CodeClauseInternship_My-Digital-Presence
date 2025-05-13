@@ -9,16 +9,16 @@
 </head>
 
 <body>
-   <div class="navbar">
-    <div class="name">Darshan Hotchandani</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="navlinks" id="navLinks">
-        <li><a href="Assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#connectme">Connect With Me</a></li>
-    </ul>
-</div>
+    <div class="navbar">
+        <div class="name">Darshan Hotchandani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="navlinks" id="navLinks">
+            <li><a href="Assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#connectme">Connect With Me</a></li>
+        </ul>
+    </div>
 
 
     <div class="second">
@@ -203,8 +203,10 @@
 
     <div class="socials techno">
         <div class="row">
-            <a href="https://github.com/Darshanh20" target="_blank"><img src="Assets/github.jpg" alt="" class="known"></a>
-            <a href="https://www.linkedin.com/in/darshan-hotchandani-497b7b31a/" target="_blank"><img src="Assets/Linkedin.png" alt="" class="known"></a>
+            <a href="https://github.com/Darshanh20" target="_blank"><img src="Assets/github.jpg" alt=""
+                    class="known"></a>
+            <a href="https://www.linkedin.com/in/darshan-hotchandani-497b7b31a/" target="_blank"><img
+                    src="Assets/Linkedin.png" alt="" class="known"></a>
         </div>
     </div>
 
@@ -230,7 +232,7 @@
             }
         }).then(response => {
             if (response.ok) {
-                form.reset(); 
+                form.reset();
                 message.textContent = "Sent!";
                 message.style.color = "green";
 
@@ -248,9 +250,10 @@
     });
 
     function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('active');
-}
+        const nav = document.getElementById('navLinks');
+        nav.classList.toggle('active');
+    }
 
 </script>
+
 </html>
