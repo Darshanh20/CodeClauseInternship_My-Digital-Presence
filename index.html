@@ -9,13 +9,17 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <ul><a href="Assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></ul>
-        <ul><a href="#aboutme">About Me</a></ul>
-        <ul class="name">Darshan Hotchandani</ul>
-        <ul><a href="#projects">Projects</a></ul>
-        <ul><a href="#connectme">Connect With Me</a></ul>
-    </div>
+   <div class="navbar">
+    <div class="name">Darshan Hotchandani</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="navlinks" id="navLinks">
+        <li><a href="Assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connectme">Connect With Me</a></li>
+    </ul>
+</div>
+
 
     <div class="second">
         <div class="headings">
@@ -36,7 +40,7 @@
             </h4>
         </div>
     </div>
-
+    <div class="section-divider" id="projects"></div>
     <div class="techno">
         <div class="row">
             <img src="Assets/github.jpg" alt="" class="known">
@@ -242,5 +246,11 @@
             message.style.color = "red";
         });
     });
+
+    function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+}
+
 </script>
 </html>

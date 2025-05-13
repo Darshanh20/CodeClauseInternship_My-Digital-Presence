@@ -6,54 +6,74 @@
 }
 
 body {
-    height: 100vh;
     background-color: #000;
     color: #fff;
+    width: 100%;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 10vh;
-}
-
-.navbar ul {
-    list-style: none;
-    font-size: 1.1rem;
+    padding: 0 2rem;
     position: relative;
-    cursor: pointer;
-    color: #fff;
-    transition: color 0.3s ease;
 }
 
-.navbar ul:not(.name)::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    right: 0;
-    background-color: #0ff;
-    transition: width 0.3s ease;
-}
-
-.navbar ul:not(.name):hover {
-    color: #0ff;
-}
-
-.navbar ul:not(.name):hover::after {
-    width: 100%;
-    left: 0;
-}
-
-.navbar .name {
+.name {
     font-size: 1.8rem;
     font-weight: bold;
     color: #0ff;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 10px #0ff;
+}
+
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navlinks {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlinks li {
+    position: relative;
+}
+
+.navlinks li a {
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navlinks li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0ff;
+    transition: width 0.3s ease;
+}
+
+.navlinks li a:hover {
+    color: #0ff;
+}
+
+.navlinks li a:hover::after {
+    width: 100%;
 }
 
 .second {
@@ -106,6 +126,8 @@ footer {
     gap: 2rem;
     padding: 2rem 4vw;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .techno .row {
@@ -187,7 +209,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
-    width: 50%;
+    width: 100%;
 }
 
 .p1 .img img {
@@ -208,7 +230,7 @@ footer {
 }
 
 .p1 .info {
-    width: 50%;
+    width: 100%;
     padding: 1rem;
     align-content: center;
 }
@@ -312,7 +334,8 @@ form {
     max-width: 400px;
     margin: auto;
     padding: 20px;
-    background: transparent; /* No background */
+    background: transparent;
+    /* No background */
     border-radius: 10px;
 }
 
@@ -324,14 +347,14 @@ textarea {
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #822929;
-    background-color: white;       
-    color: black;                 
+    background-color: white;
+    color: black;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: black;                
-    opacity: 1;                  
+    color: black;
+    opacity: 1;
 }
 
 button {
@@ -341,4 +364,93 @@ button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .techno {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .techno .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .p1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .p1 .info {
+        max-width: 100%;
+    }
+
+    .p1 .info h1 {
+        font-size: 1.5rem;
+    }
+
+    .p1 .info h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .p1 .link {
+        margin-top: 0.5rem;
+        display: inline-block;
+        color: #0ff;
+        text-decoration: underline;
+    }
+
+    .socials .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .second {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .headings {
+        max-width: 100%;
+    }
+    .headings h4{
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .navbar{
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .navlinks {
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        background-color: #111;
+        width: 100%;
+        text-align: center;
+        display: none;
+        padding: 2rem 0;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+
+    .name{
+        color: #FFA500;
+        text-shadow: 0 0 10px #FFA500;
+        font-size: 1.5rem;
+    }
 }
