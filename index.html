@@ -6,6 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Hotchandani</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-section {
+            width: 60rem;
+            margin: 0 auto;
+        }
+
+        .timeline-title {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background: #2196F3;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            margin: 0 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #2196F3;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -48px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -48px;
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 8px 0;
+            color: #2196F3;
+            font-size: 1.3rem;
+        }
+
+        .timeline-content p {
+            margin: 0 0 8px 0;
+            color: #666;
+        }
+
+        .timeline-content .year {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #2196F3;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Arrow styles */
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -8px;
+            border-width: 8px 0 8px 8px;
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -8px;
+            border-width: 8px 8px 8px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                margin-left: 50px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-content {
+                margin: 0 0 0 20px;
+            }
+
+            .timeline-content::before {
+                left: -38px !important;
+            }
+
+            .timeline-content::after {
+                left: -8px !important;
+                right: auto !important;
+                border-width: 8px 8px 8px 0 !important;
+                border-color: transparent #fff transparent transparent !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -70,12 +212,32 @@
         <div><span class="dot learning-dot"></span>Individual Projects</div>
     </div>
     <div class="projects">
+        <div class="p1 own">
+            <div class="img">
+                <img src="Assets/p6(1).png" alt="">
+                <img src="Assets/p6(2).png" alt="">
+                <img src="Assets/p6(3).png" alt="">
+                <img src="Assets/p6(4).png" alt="">
+            </div>
+            <div class="info">
+                <h1>ShareEZ</h1>
+                <h4>
+                    ShareEZ is a secure, anonymous file-sharing app I built during my internship at CodeClause. Users
+                    can upload files without signing in, generate customizable passwords, and set optional expiry dates
+                    for links. The app creates a secure shareable link and password to control access, all wrapped in a
+                    simple, user-friendly interface with a dark theme.
+                </h4>
+                <a href="https://github.com/Darshanh20/CodeClauseInternship_File-Sharing-Platform" class="link"
+                    target="_blank">GitHub Link</a>
+                <a href="https://shareez.netlify.app/" class="link" target="_blank">Use Here</a>
+            </div>
+        </div>
         <div class="p1 grp">
             <div class="img">
-                <img src="Assets/p1(1).png" alt="">
-                <img src="Assets/p1(2).png" alt="">
-                <img src="Assets/p1(3).png" alt="">
-                <img src="Assets/p1(4).png" alt="">
+                <img src="Assets/p1(1).png" alt="" style="object-fit: contain;">
+                <img src="Assets/p1(2).png" alt="" style="object-fit: contain;">
+                <img src="Assets/p1(3).png" alt="" style="object-fit: contain;">
+                <img src="Assets/p1(4).png" alt="" style="object-fit: contain;">
             </div>
             <div class="info">
                 <h1>MoneyLog</h1>
@@ -108,8 +270,8 @@
         </div>
         <div class="p1 grp">
             <div class="img">
-                <img src="Assets/p3(1).png" alt="">
-                <img src="Assets/p3(2).png" alt="">
+                <img src="Assets/p3(1).png" alt="" style="object-fit: contain;">
+                <img src="Assets/p3(2).png" alt="" style="object-fit: contain;">
             </div>
             <div class="info">
                 <h1>Vaccine Care</h1>
@@ -139,8 +301,8 @@
         </div>
         <div class="p1 grp">
             <div class="img">
-                <img src="Assets/p5(1).png" alt="">
-                <img src="Assets/p5(2).png" alt="">
+                <img src="Assets/p5(1).png" alt="" style="object-fit: contain;">
+                <img src="Assets/p5(2).png" alt="" style="object-fit: contain;">
             </div>
             <div class="info">
                 <h1>TRAVELSY</h1>
