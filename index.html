@@ -6,148 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Hotchandani</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .timeline-section {
-            width: 60rem;
-            margin: 0 auto;
-        }
-
-        .timeline-title {
-            text-align: center;
-            color: #333;
-            font-size: 2.5rem;
-        }
-
-        .timeline {
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 3px;
-            background: #2196F3;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1.5px;
-        }
-
-        .timeline-item {
-            position: relative;
-            width: 50%;
-            margin-bottom: 20px;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-
-        .timeline-content {
-            margin: 0 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: #2196F3;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            right: -48px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            left: -48px;
-        }
-
-        .timeline-content h3 {
-            margin: 0 0 8px 0;
-            color: #2196F3;
-            font-size: 1.3rem;
-        }
-
-        .timeline-content p {
-            margin: 0 0 8px 0;
-            color: #666;
-        }
-
-        .timeline-content .year {
-            display: inline-block;
-            padding: 3px 8px;
-            background: #2196F3;
-            color: white;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        /* Arrow styles */
-        .timeline-content::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::after {
-            right: -8px;
-            border-width: 8px 0 8px 8px;
-            border-color: transparent transparent transparent #fff;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::after {
-            left: -8px;
-            border-width: 8px 8px 8px 0;
-            border-color: transparent #fff transparent transparent;
-        }
-
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                margin-left: 50px;
-            }
-
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-
-            .timeline-content {
-                margin: 0 0 0 20px;
-            }
-
-            .timeline-content::before {
-                left: -38px !important;
-            }
-
-            .timeline-content::after {
-                left: -8px !important;
-                right: auto !important;
-                border-width: 8px 8px 8px 0 !important;
-                border-color: transparent #fff transparent transparent !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -204,6 +62,33 @@
         <div><span class="dot known-dot"></span> Known</div>
         <div><span class="dot learning-dot"></span> Learning</div>
     </div>
+    <div class="section-divider" id="projects"></div>
+    <section class="experience">
+        <em>A snapshot of my academic path and hands-on experience</em>
+        <h1 class="section-title">My Journey</h1>
+        <div class="box">
+            <div class="timeline-line"></div>
+            <div class="vertical">
+                <img src="Assets/school.jpg" alt="">
+                <div class="vertical-title">Bhartiya Vidya Bhavan's  <div><em>2011-2023</em></div></div>
+                <div class="vertical-desc">Completed my foundational education here, where I developed core academic
+                    skills and built a strong base in mathematics, science, and technology. Also participated in various
+                    co-curricular activities that nurtured my interest in computers and problem-solving.</div>
+            </div>
+            <div class="vertical">
+                <img src="Assets/college.jpeg" alt="">
+                <div class="vertical-title">Charotar University of Science and Technology
+                    <div><em>B.Tech in Information Technology, 2023 - 2027</em></div></div>
+                <div class="vertical-desc">Currently pursuing a B.Tech in Information Technology at Charotar University of Science and Technology (2023-2027), where I've built a strong foundation in computer science, software engineering, and full-stack development.</div>
+            </div>
+            <div class="vertical">
+                <img src="Assets/codeclause.jpeg" alt="">
+                <div class="vertical-title">CodeClause - Web Development Intern
+                    <div><em>May 2025 - Present</em></div></div>
+                <div class="vertical-desc">Currently interning as a Web Developer at CodeClause, building real-world projects like a secure, no-login file-sharing platform using React, Supabase, and Netlify — integrating seamless UI with robust backend logic.</div>
+            </div>
+        </div>
+    </section>
     <div class="section-divider" id="projects"></div>
     <h2 class="section-title">Projects</h2>
 

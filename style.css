@@ -364,7 +364,91 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+.experience {
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
 
+.section-title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.experience em {
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    z-index: 1;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.vertical::before {
+    content: "";
+    height: 90px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 100px;
+    border: 2px solid white;
+}
+
+.vertical-title {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.vertical-desc {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    max-width: 200px;
+    line-height: 1.4;
+    color: #cbd5e1;
+}
+.vertical em{
+    color: #0ff;
+}
 @media (max-width: 768px) {
     .techno {
         display: flex;
@@ -452,5 +536,31 @@ button {
         color: #FFA500;
         text-shadow: 0 0 10px #FFA500;
         font-size: 1.5rem;
+    }
+    .p1 .img img{
+        object-fit: contain;
+    }
+     .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertical {
+        margin-bottom: 40px;
+    }
+
+    .vertical::before {
+        display: none; /* Hide connecting lines on small screens */
+    }
+
+    .vertical img {
+        margin-top: 0;
+    }
+
+    .vertical-desc {
+        max-width: 90%;
+    }
+    .timeline-line{
+        display: none;
     }
 }
